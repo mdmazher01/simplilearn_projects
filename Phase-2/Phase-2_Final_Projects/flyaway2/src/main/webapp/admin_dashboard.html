@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<label class="welcome">Welcome to Dashboard</label>
+	
+	<div class="container">
+    	<img src="back.jpg" id="bg" alt="">
+    </div>	
+   
+    
+<div class="frm4" >
+	<form action="add_flight" method="post">
+	
+		<label class="addflight">Add Flight</label>
+		
+		<label class="ln2">Enter Id :</label>
+		<div class="combineInput">
+			<input type="number" name="id">
+		</div>
+	
+		<label class="ln3">Enter Date :</label>
+		<div class="combineInput">
+			<input type="date" name="date">
+		</div>
+		
+		<label class="ln4">Enter Source :</label>
+		<div class="combineInput">
+			<input type="text" name="source">
+		</div>
+	
+		<label class="ln5">Enter Destination :</label>
+		<div class="combineInput">
+			<input type="text" name="destination">
+		</div>
+		
+	
+		<label class="ln6">Enter Seat :</label>
+		<div class="combineInput">
+			<input type="number" name="seat">
+		</div>
+		
+	
+		<label class="ln7">Enter Price :</label>
+		<div class="combineInput">
+			<input type="number" name="price">
+		</div>
+		
+		<div class="button">
+			<input type="submit" class="subbtn1">
+		</div>
+	
+		
+	</form>
+</div>
+
+
+<div class="frm5">
+	<form action="delete_flight" method="post">
+		
+		
+		<label class="ln8">Delete Flight</label>
+		<label class="ln9">Enter id :</label>
+		
+		<div class="combineInput2">
+			<input type="number" name="id2">
+		</div>
+		<div class="button">
+			<input type="submit"class="subbtn2">
+		</div>
+	
+	</form>
+</div>
+
+<div class="frm6">
+
+	<form action="view_flight" method="post">
+	
+		<label class="ln10">View Flight</label>
+	
+		<div class="button">
+			<input type="submit"class="subbtn3">
+		</div>
+	
+	</form>
+	
+</div>
+<div class="link">
+	<a href="index.html">Logout</a>
+</div>
+
+
+</body>
+</html>
