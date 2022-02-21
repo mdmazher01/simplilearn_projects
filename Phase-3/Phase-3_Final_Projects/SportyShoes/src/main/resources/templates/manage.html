@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<title>Manage Category Unit<</title>
+<style>
+    .table {
+    width:55%;
+    height:60%;
+  }
+
+  .tx{
+      margin-top:60px;
+      margin-bottom: 40px;
+  }
+  .l{
+      margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<div align="center">
+<div class="tx">
+    <h1 class="display-4">Categories List</h1>
+</div>
+
+        <div class="l">
+           
+        <a href="/new"><h4><span class="badge badge-primary">Create New Category</span></a>
+        </div>
+        <table class="table table-dark">
+            <thead>
+            <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Action</th>
+            </tr>
+            </thead>
+                <tbody>
+                <tr th:each="categories : ${listCategories}">
+                <td th:text="${categories.id}">id</td>
+                <td th:text="${categories.categoryName}">Name</td>
+                <td><a th:href="@{/delete/{id}(id=${categories.id})}">Delete</a></td>
+                </tr>
+                </tbody>
+        </table>
+            <a href="/logout"><h4><span class="badge badge-secondary">Logout</span></h4></a>
+</div>
+</body>
+</html>

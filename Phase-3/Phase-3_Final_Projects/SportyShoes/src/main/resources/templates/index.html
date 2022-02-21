@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<title>List OF User Details</title>
+<style>
+  .table {
+    width:85%;
+    height:60%;
+  }
+  .tx2{
+    margin-top:20px;
+  }
+</style>
+</head>
+<body>
+<div align="center">
+<h1 class="tx2">Users</h1>
+<br/>
+ <table class="table table-dark table-hover">
+   <thead >
+     <tr>
+        <th>UserId</th>
+        <th>UserName</th>
+        <th>email Id</th>
+        <th>Phone</th>
+        <th>Product Perchased</th>
+        <th>Perchase Date</th>
+        <th>Category</th>
+        <th>Create Date</th>
+        <th>Last Update Date</th>
+      </tr>
+     </thead>
+     <tbody>
+       <tr th:each="userdetails : ${listUsers}">
+          <td th:text="${userdetails.userId}"></td>
+          <td th:text="${userdetails.username}"></td>
+          <td th:text="${userdetails.emailId}"></td>
+          <td th:text="${userdetails.phone}"></td>
+          <td th:text="${userdetails.productPerchased}"></td>
+          <td th:text="${userdetails.perchaseDate}"></td>
+          <td th:text="${userdetails.category}"></td>
+          <td th:text="${userdetails.createdate}"></td>
+          <td th:text="${userdetails.lastupdatedate}"></td>
+        </tr>
+     </tbody>
+     </table>
+     <a href="/logout"><h4><span class="badge badge-secondary">LogOut</span></h4></a>
+   </div>
+</body>
+</html>

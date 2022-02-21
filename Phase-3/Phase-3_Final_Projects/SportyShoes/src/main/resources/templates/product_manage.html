@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<title>Manage Product Unit</title>
+<style>
+    body{
+        background-color: rgb(236, 236, 236);
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .tx1{
+        position: relative;
+        left: 500px;
+        top: 50px
+    }
+    .table{
+        position: relative;
+        top: 100px;
+        left: 200px;
+        max-width: 70%;
+        border-radius: 6px;
+    }
+    
+    .l1{
+        position: relative;
+        left: 550px;
+        top: 80px;
+    }
+    .l2{
+        position: relative;
+        top: 130px;
+        left: 600px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <div class="tx1">
+            <h2 class="display-4">Products List</h2>
+        </div>
+        <div class="l1">
+            <a href="/newproduct"><h4><span class="badge badge-primary">Create New Product</span></h4></a>
+        </div>
+        
+            <table class="table table-hover table-dark">
+            <thead>
+            <tr>
+            <th>Product id</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th>size</th>
+            </tr>
+            </thead>
+                    <tbody>
+                    <tr th:each="product : ${listProduct}">
+                    <td th:text="${product.id}"></td>
+                    <td th:text="${product.productName}"></td>
+                    <td th:text="${product.category}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.status}"></td>
+                    <td th:text="${product.size}"></td>
+                    </tr></tbody>
+            </table>
+            <div class="l2">
+                <a href="/logout"><h4><span class="badge badge-secondary">Logout</span></h4></a>
+            </div>
+            
+    </div>
+</body>
+</html>
+                 

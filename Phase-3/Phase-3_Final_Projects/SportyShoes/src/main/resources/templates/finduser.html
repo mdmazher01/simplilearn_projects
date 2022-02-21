@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+����xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<title>Search User</title>
+<style>
+
+  body{
+    background-color: rgb(236, 236, 236);
+  }
+  .frm{
+    margin-left: 410px;
+    margin-top: 10px;
+  }
+  .bt{
+    left: 490px;
+  }
+
+  .dis{
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .tx{
+    margin-left: 520px;
+    margin-top: 180px;
+  }
+
+
+</style>
+</head>
+<body>
+ <div aling="center">
+    <h3 class="tx">Enter UserName</h3>
+    <br>
+    <div class="frm">
+      <form action="user"  method ="post">
+        <table border="0" cellpadding="10">
+           <tr>
+             <td class="dis">UserName :</td>
+               <td> <input type="text" name="username"/>
+                 </td>
+                 <div class="bt">
+                  
+                    <td colspan="2"><button type="submit" class="btn btn-primary">Search</button> </td>
+                
+                 </div>
+                  
+           </table>    
+   </form>
+    </div>
+    
+ </div>
+</body>
+</html>
