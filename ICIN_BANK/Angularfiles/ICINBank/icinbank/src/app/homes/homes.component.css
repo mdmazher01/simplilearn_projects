@@ -1,0 +1,122 @@
+
+
+body {
+    overflow: -moz-scrollbars-vertical;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+
+.card{
+
+    width:30%;
+    left:710px;
+    font-size: 14px;
+    height:50%;
+    border-radius: 8%;
+    background-color: rgba(214, 77, 77,0.5);
+    border: 1px solid black;
+    color: white;
+    
+    
+}
+
+p{
+    color: #ffffff;
+}
+
+
+
+.t1{
+   font-size: 17px;
+   
+}
+
+.btn{
+    
+    background-color: white;
+   
+    border: 1px solid black;
+  
+    padding:7px 10px;
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+}
+
+.btn:hover{
+    background-color: rgba(214, 77, 77,0.8);
+}
+
+.text-center{
+    position:relative;
+    top: 200px;
+    right: 300px;
+}
+
+.blockquote{
+    font-size:22px;
+}
+.blockquote-footer{
+    font-size:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.arrow {
+    position: absolute;
+    top: 160px;
+    left: 51.80%;
+    transform: translate(-50%, -50%);
+    transform: rotate(-90deg);
+}
+
+.arrow span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll1 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -.4s;
+}
+
+@keyframes scroll1 {
+    0% {
+        opacity: 1;
+        transform: rotate(45deg) translate(-20px, -20px);
+        border-bottom: 5px solid #ff3333;
+        border-right: 5px solid #d41919;
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+}
+
+input[type="text"], input[type="number"]{
+    border: 1px solid black;
+    background-color: #d0d1d7;
+    
+}
+

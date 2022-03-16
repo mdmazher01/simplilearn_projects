@@ -1,0 +1,27 @@
+ 
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <div class="card-title">
+                <h3 class="t1">Reset</h3>
+                <div class="card-content">
+                    <form autocomplete="off" #userresetdata="ngForm" (ngSubmit)="userReset(userresetdata)">
+                        <div class="form-group">
+                            <label for="username">Name</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Name" [(ngModel)]="userResetData.username">
+                        </div>  
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="text" name="password" id="password" class="form-control" placeholder="Password" [(ngModel)]="userResetData.password">
+                        </div>    
+                          
+                        <div class="form-group">
+                            <input type="submit" value="Reset" class="btn">
+
+                        </div>
+                       
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

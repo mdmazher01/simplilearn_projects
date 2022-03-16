@@ -1,0 +1,35 @@
+
+<div class="maincontainer">
+    <table class="table table-bordered shadow bg-white rounded">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Operation (Block value : 0 , Unblock value : 1)</th>
+                <th>Cheque Book Request</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let k of allaccount">
+                <td>{{k.username}}</td>
+                <td *ngIf="k.status == 0">{{s5}}</td>
+                <td *ngIf="k.status == 1">{{s6}}</td>
+                <td>
+                <form #statusdata="ngForm" (ngSubmit)="statuss(k.username, statusdata)" autocomplete="off">
+                    <input #status (ngModel)="status"  type="number" name="status" placeholder="Number" class="form-control">
+                    <input type="submit" name="Submit" class="btn">
+                </form>
+                </td>
+                <td *ngIf="k.username == s4">Account : {{s3}}
+                    &nbsp;
+                    &nbsp;
+                    <button type="submit" class="btn" (click)="approved()">Approve</button>
+                    &nbsp;
+                    <button type="submit" class="btn" (click)="decline()">Decline</button>
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

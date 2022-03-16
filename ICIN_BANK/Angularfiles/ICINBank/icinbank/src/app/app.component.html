@@ -1,0 +1,56 @@
+
+  
+    <ul class="nav">
+     
+      <li class="nav-item">
+        <button class="btn" type="button" style="color:white;" routerLink="/" [disabled]=flag7>
+          Home
+        </button>
+      </li>
+      <li class="nav-item">
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+            Admin
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item" routerLink="adminlogin" [disabled]=flag1>login</button>
+            <button class="dropdown-item" routerLink="/" [disabled]=flag2>logout</button>
+            <button class="dropdown-item" routerLink="adminreset" [disabled]=flag3>Reset</button>
+          </div>
+        </div>
+      </li>
+      
+      <li>
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+            User
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item" routerLink="userlogin" [disabled]=flag4>login</button>
+            <button class="dropdown-item" routerLink="/" [disabled]=flag5>logout</button>
+            <button class="dropdown-item" routerLink="userreset"  [disabled]=flag6>Reset</button>
+          </div>
+        </div>
+      </li>
+      
+  </ul>
+
+  
+
+
+<!-- <footer>
+    <div class="foot">
+        <div class="container text-center">
+          <p class="text">© 2022 ICINBank All rights reserved.</p>
+        </div>
+      </div>
+</footer> -->
+
+<router-outlet></router-outlet>
+
+  
+
+   
+
+
+

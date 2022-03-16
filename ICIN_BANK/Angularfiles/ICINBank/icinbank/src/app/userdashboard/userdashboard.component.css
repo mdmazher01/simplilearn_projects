@@ -1,0 +1,648 @@
+.card-group{
+    position:relative;
+    /* background-color: red; */
+    width: 95%;
+    left:20px;
+    height:100%;
+    
+}
+
+.sc{
+    position: absolute;
+    /* background-color: blue; */
+    width:80%;
+    height:25%;
+    left:15px;
+    
+   
+}
+/*balance card*/
+.maincontainer1{
+    position: relative;
+    width:150px;
+    height:120px;
+    top:20px;
+    left:70px;
+    right:0px;
+    bottom:0px;
+    perspective: 1000px;
+    border-radius:10px;
+   
+  
+   
+}
+
+.thecard1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+}  
+.thecard1:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+   
+ 
+}
+
+
+.theback1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+    
+}
+
+
+
+
+.l1{
+    padding-left:27px;
+    padding-top:37px;;
+    font-size:25px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/*saving card*/
+.maincontainer2{
+    position: relative;
+    width:150px;
+    height:120px;
+    top:170px;
+    right:80px;
+    perspective: 1000px;
+    border-radius:10px;
+  
+   
+}
+
+.thecard2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+   
+}  
+.thecard2:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+ 
+}
+
+
+.theback2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+}
+
+
+
+
+.l2{
+    padding-left:27px;
+    padding-top:37px;;
+    font-size:25px;
+}
+
+
+
+
+
+/*deposit card*/
+.maincontainer3{
+    position: relative;
+    width:190px;
+    height:120px;
+    right:60px;
+    top:20px;
+    perspective: 1000px;
+    border-radius:10px;
+  
+   
+}
+
+.thecard3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+}  
+.thecard3:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+ 
+}
+
+
+.theback3{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    padding-top: 15px;
+    padding-right: 20px;
+
+    
+}
+
+
+
+
+.l3{
+    padding-left:48px;
+    padding-top:37px;;
+    font-size:25px;
+}
+
+input[type=text], input[type=number] {
+    border: 1px solid black;
+}
+
+
+
+/*withdraw card*/
+.maincontainer4{
+    position: relative;
+    width:190px;
+    height:120px;
+    right: 40px;
+    top:20px;
+    perspective: 1000px;
+    border-radius:10px;
+  
+   
+}
+
+.thecard4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+}  
+.thecard4:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+ 
+}
+
+
+.theback4{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    padding-top: 15px;
+    padding-right: 20px;
+
+    
+}
+
+
+
+
+.l4{
+    padding-left:40px;
+    padding-top:37px;;
+    font-size:25px;
+}
+
+
+
+
+/*Transfer card*/
+.maincontainer5{
+    position: relative;
+    width:190px;
+    height:272px;
+    right:20px;
+    top:20px;
+    perspective: 1000px;
+    border-radius:10px;
+  
+   
+}
+
+.thecard5{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+}  
+.thecard5:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront5{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+ 
+}
+
+
+.theback5{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    padding-top: 45px;
+    padding-right: 20px;
+
+    
+}
+
+
+
+
+.l5{
+    padding-left:40px;
+    padding-top:37px;;
+    font-size:25px;
+}
+
+
+
+
+
+
+/*transfer between account*/
+.maincontainer6{
+    position: relative;
+    width:400px;
+    height:120px;
+    left: 560px;
+    bottom:265px;
+    perspective: 1000px;
+    border-radius:10px;
+  
+   
+}
+
+.thecard6{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+}  
+.thecard6:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront6{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+ 
+}
+
+
+.theback6{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    padding-top: 15px;
+
+
+
+    
+}
+
+
+
+
+.l6{
+    padding-left:40px;
+    padding-top:37px;;
+    font-size:25px;
+}
+
+select{
+    width:30%;
+    border:1px solid black;
+}
+
+
+.l7{
+    position:relative;
+    width:30%;
+    left: 120px;
+    bottom: 55px;
+}
+
+.l8{
+    position:relative;
+    left: 240px;
+    bottom: 110px;
+}
+
+
+
+
+/*cheque card*/
+.maincontainer7{
+    position: relative;
+    width:150px;
+    height:120px;
+    bottom:120px;
+    right:10px;
+    perspective: 1000px;
+    border-radius:10px;
+  
+   
+}
+
+.thecard7{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+}  
+.thecard7:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront7{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+ 
+}
+
+
+.theback7{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+}
+
+
+
+
+.l9{
+    padding-left:27px;
+    padding-top:37px;;
+    font-size:25px;
+}
+
+
+.s1{
+    top:20px;
+    margin-left: 25px;
+    margin-top: 13px;
+    width:70%;
+}
+
+.l10{
+    margin-left:35px;
+}
+
+
+
+/*statement card*/
+.maincontainer8{
+    position: relative;
+    width:610px;
+    height:120px;
+    bottom:120px;
+    left: 10px;
+    perspective: 1000px;
+    border-radius:10px;
+  
+   
+}
+
+
+.thecard8{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+}  
+.thecard8:hover{
+    /* transform: rotateY(180deg); */
+    background-color: rgba(226, 108, 108, 0.8);
+}
+
+.thefront8{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+ 
+}
+
+
+.theback8{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+}
+
+
+
+
+.l11{
+    padding-left:240px;
+    padding-top:40px;;
+    font-size:25px;
+}
+
+.btn{
+    background-color: white;
+    border:1px solid black;
+    color: rgb(0, 0, 0);
+}
+
+.btn:hover{
+    background-color: rgba(214, 77, 77,0.8);
+}
+
+.rupees{
+    font-size:25px;
+    padding-left: 35px;
+    padding-top:35px;
+}
+
+.tab{
+    position: relative;
+    margin-left:100px;
+   
+    
+    
+}
+
+table{
+    width:1000px;
+}
+
+
+/*notification card*/
+.maincontainer9{
+    position: relative;
+    width:320px;
+    height:420px;
+    left:20px;
+    top:20px;
+    perspective: 1000px;
+    border-radius:10px;
+   
+  
+   
+}
+
+.thecard9{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    border-radius:10px;
+    border: 1px solid black;
+   
+    color: white;
+}  
+.thecard9:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront9{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+   
+ 
+}
+
+
+.theback9{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+    
+}
+
+
+
+
+.l15{
+    padding-left:27px;
+    padding-top:37px;;
+    font-size:25px;
+    color: rgb(255, 255, 255);
+}
+
+.tt{
+    width:80%;
+    margin-left:30px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.t2{
+    margin-left:30px;
+}
+
+.noti{
+    position:relative;
+    font-size:17px;
+    margin-top:10px;
+    left:10px;
+    font-weight: 550;
+    
+}

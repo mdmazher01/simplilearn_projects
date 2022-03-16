@@ -1,0 +1,41 @@
+
+
+
+.nav{
+
+    /* position: fixed; */
+    width: 100%;
+    padding-top:6px;
+    font-size:17px;
+    font-weight:500;
+
+     
+}
+footer{
+
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 0px;
+   font-size:17px;
+  
+}
+
+
+a{
+    color:rgb(255, 255, 255);
+}
+
+
+
+p{
+    color:rgb(255, 255, 255);
+}
+.btn-group{
+    border: none;
+    
+   
+}
+

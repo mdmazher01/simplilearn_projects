@@ -1,0 +1,277 @@
+
+<!---->
+<div class="card-group" *ngFor="let i of d">
+
+    
+    <div class="maincontainer9">
+        <div class="thecard9 shadow-lg">
+            <div class="thefront9">
+                <label class="l15">Welcome</label>
+                <p class="tt">We are committed to providing our customers with the highest level of service and the most innovative banking products possible. We are very glad you chose us as your financial institution and hope you will take advantage of our wide variety of savings, investment and loan products, all designed to meet your specific needs.
+
+                    For more detailed information about any of our products or services, please refer to our website, www.icinbank.com, or visit any of our convenient locations. You may contact us by phone at 1-800-555-5555.
+                    
+                </p>
+                <p class="t2" style="font-weight:550;">For Notification, hover on it.</p>
+            </div>
+            <div class="theback9">
+                <div class="noti">
+                    <label class="ar">Cheque Request:{{this.s8}}</label><br>
+                    <label class="rr">Request Status:{{this.s7}}</label>
+                </div>
+                
+               
+            </div>
+        </div>
+    
+    </div> 
+ 
+  
+    <div class="maincontainer1">
+        <div class="thecard1 shadow-lg">
+            <div class="thefront1">
+                <label class="l1">Balance</label>
+            </div>
+            <div class="theback1">
+                <!---->
+                <label class="rupees">₹ {{i.balance}}</label>
+               
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    <div class="maincontainer2">
+        <div class="thecard2 shadow-lg">
+            <div class="thefront2">
+                <label class="l2">Saving</label>
+            </div>
+            <div class="theback2">
+                <!---->
+                <label class="rupees">₹ {{i.savingbalance}}</label>
+               
+            </div>
+        </div>
+    
+    </div>
+
+
+    <div class="maincontainer3">
+        <div class="thecard3 shadow-lg">
+            <div class="thefront3">
+                <label class="l3">Deposit</label>
+            </div>
+            <div class="theback3">
+                <!-- -->
+                <form autocomplete="off" #baldata="ngForm" (ngSubmit)="addBalance(baldata,i.username)">
+                    <div class="form-group">
+                        <input #balance (ngModel)="balance" type="text" class="form-control" placeholder="Balance" name="balance">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Add" class="btn">
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+    
+    </div>
+
+
+
+    <div class="maincontainer4">
+        <div class="thecard4 shadow-lg">
+            <div class="thefront4">
+                <label class="l4">Withdraw</label>
+            </div>
+            <div class="theback4">
+                <!-- -->
+                <form #withdata="ngForm" (ngSubmit)="withdrawMoney(i.username,withdata)">
+                    <div class="form-group">
+                        <input #withdrawamount (ngModel)="withdrawamount" type="number" class="form-control" placeholder="Amount" name="withdrawamount">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Withdraw" class="btn">
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+    
+    </div>
+
+
+
+    <div class="maincontainer5">
+        <div class="thecard5 shadow-lg">
+            <div class="thefront5">
+                <label class="l5">Transfer</label>
+            </div>
+            <div class="theback5">
+                <!--  -->
+                <form autocomplete="off" #trandata="ngForm" (ngSubmit)="transferMoney(i.username,trandata)">
+                    <div class="form-group">
+                        <input #username (ngModel)="username" type="text" class="form-control" placeholder="Recipient Name" name="username">
+                    </div>
+                    <div class="form-group">
+                        <input #balance (ngModel)="balance" type="number" class="form-control" placeholder="Amount" name="balance">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Transfer" class="btn">
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+    <div class="maincontainer6">
+        <div class="thecard6 shadow-lg">
+            <div class="thefront6">
+                <label class="l6">Transfer Between Account</label>
+            </div>
+            <div class="theback6">
+                <!--   -->
+                <form autocomplete="off" #bdata="ngForm" (ngSubmit)="transferMoneyBetweenAccount(i.username,bdata)">
+                      <div class="form-group">
+                        <label style="font-weight:550;">Select Account</label>
+                        <select class="form-control" [(ngModel)]="acc.account" name="account">
+                          <option>Primary</option>
+                          <option>Saving</option>
+                        </select>
+                      </div>
+                      <div class="form-group l7" *ngIf="acc.account == 'Primary'">
+                          <input #balance (ngModel)="balance" type="number" name="balance" placeholder="Amount" class="form-control">
+                      </div>
+                      <div class="form-group l7" *ngIf="acc.account == 'Saving'">
+                        <input #savingbalance (ngModel)="savingbalance" type="number" name="savingbalance" placeholder="Amount" class="form-control">
+                    </div>
+                      <div class="form-group l8" *ngIf="acc.account != ''">
+                        <input type="submit" class="btn">
+                    </div>
+
+                </form>
+               
+            </div>
+        </div>
+    
+    </div>
+
+
+    <div class="maincontainer7">
+        <div class="thecard7 shadow-lg">
+            <div class="thefront7">
+                <label class="l9">Cheque Book</label>
+            </div>
+            <div class="theback7">
+                <!-- -->
+                <form autocomplete="off" #accountdatas="ngForm" (ngSubmit)="request(accountdatas,i.username)">
+                    <div class="form-group">
+                        <select class="form-control s1" #accounts (ngModel)="accounts" name="accounts">
+                            <option>Primary</option>
+                            <option>Secondary</option>
+                          </select>
+                          
+                    </div>
+                    <div class="form-group l10">
+                      <input type="submit" class="btn">
+                  </div>
+
+              </form>
+               
+            </div>
+        </div>
+    
+    </div>
+
+    <!--  -->
+    <div class="maincontainer8"  style="cursor: pointer;" (click)="getAll()">
+        <div class="thecard8 shadow-lg">
+            <div class="thefront8">
+                <label class="l11">Statement</label>
+            </div>
+            <div class="theback8">
+                <label></label>
+               
+            </div>
+        </div>
+    
+    </div>
+    
+
+
+</div>
+<div class="sc" id="sec">
+    <div class="tab">
+
+
+        <table class="table table-bordered shadow bg-white rounded" *ngIf=flag>
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    <th>Saving Balance</th>
+                    <th>Withdraw Amount</th>
+                    <th>Withdraw Date</th>
+                    <th>Recipient Name</th>
+                    <th>Transfer Amount</th>
+                    <th>Transfer Date</th>
+                    
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr *ngFor="let j of d">
+                    <td>{{j.username}}</td>
+                    <td>{{j.balance}}</td>
+                    <td>{{j.savingbalance}}</td>
+                    <td>{{j.withdrawamount}}</td>
+                    <td>{{j.withdrawdate}}</td>
+                    <td>{{j.recipientname}}</td>
+                    <td>{{j.transferamount}}</td>
+                    <td>{{j.transferdate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    
+    
+    </div>
+</div>
+<!-- <div class="tab">
+
+
+    <table class="table table-bordered shadow bg-white rounded" >
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Saving Balance</th>
+                <th>Withdraw Amount</th>
+                <th>Withdraw Date</th>
+                <th>Recipient Name</th>
+                <th>Transfer Amount</th>
+                <th>Transfer Date</th>
+                
+            </tr>
+        </thead>
+        <tbody class="tbody" *ngIf=flag>
+            <tr *ngFor="let j of d">
+                <td>{{j.username}}</td>
+                <td>{{j.balance}}</td>
+                <td>{{j.savingbalance}}</td>
+                <td>{{j.withdrawamount}}</td>
+                <td>{{j.withdrawdate}}</td>
+                <td>{{j.recipientname}}</td>
+                <td>{{j.transferamount}}</td>
+                <td>{{j.transferdate}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div> -->
